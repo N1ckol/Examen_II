@@ -56,7 +56,7 @@ def abrir_shape():
     textResult2.insert(tk.END, shape_abierto)
     
 
-boton2 = tk.Button(text="Seleccione el shapefile ", font = 'Arial 10', bg="white", command = abrir_shape)
+boton2 = tk.Button(text="Seleccione el shapefile ", font = 'Arial 10', bg="red", command = abrir_shape)
 boton2.grid(row = 4, column = 1)
 # caja 3 #
 
@@ -66,7 +66,7 @@ etiq3.grid(row = 6, column = 1)
 
 
 
-boton3 = tk.Button(text="Preprocesar la imagen", font = 'Arial 10', bg="white")
+boton3 = tk.Button(text="Preprocesar la imagen", font = 'Arial 10', bg="red")
 boton3.grid(row = 7, column = 1)
 
 # Caja 4 #
@@ -81,3 +81,17 @@ umbral.grid(row = 10, column = 1, pady = (3))
 
 boton4 = tk.Button(text="Aplicar la mascara", font = 'Arial 10', bg="white")
 boton4.grid(row = 11, column = 1, pady =(3))
+# caja 5 #
+
+
+etiq5 = tk.Label(vent, text='5. Crea la imagen GeoTIFF a partir del umbral seleccionado.', font = 'Arial 10', bg='gray88', fg='black')
+etiq5.grid(row = 12, column = 1)
+
+mapa = tk.Canvas(vent, width = 500, height = 600, bg = 'red', highlightthickness = 10)
+mapa.grid(row = 0, column = 2, rowspan = 14, pady =(30))
+
+
+boton5 = tk.Button(text="Crear el archivo", font = 'Arial 10', bg="white")
+boton5.grid(row = 13, column = 1)
+
+vent.mainloop()
